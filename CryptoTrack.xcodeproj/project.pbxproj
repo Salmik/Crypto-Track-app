@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,16 @@
 		AC702F97264A7258007AB7A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC702F95264A7258007AB7A7 /* Main.storyboard */; };
 		AC702F99264A7259007AB7A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC702F98264A7259007AB7A7 /* Assets.xcassets */; };
 		AC702F9C264A7259007AB7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC702F9A264A7259007AB7A7 /* LaunchScreen.storyboard */; };
+		AC702FA4264A727C007AB7A7 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC702FA3264A727C007AB7A7 /* APICaller.swift */; };
+		AC702FA6264A77CB007AB7A7 /* CryptoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC702FA5264A77CB007AB7A7 /* CryptoTableViewCell.swift */; };
+		AC702FA8264A84F2007AB7A7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC702FA7264A84F2007AB7A7 /* Models.swift */; };
+		FFB737572D84F46830B31AFC /* Pods_CryptoTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A55F590A58C45158C165A0E /* Pods_CryptoTrack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B687638F6071198985EB64E /* Pods-CryptoTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTrack.debug.xcconfig"; path = "Target Support Files/Pods-CryptoTrack/Pods-CryptoTrack.debug.xcconfig"; sourceTree = "<group>"; };
+		7A55F590A58C45158C165A0E /* Pods_CryptoTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A700EB6DC7EE185BA747EE /* Pods-CryptoTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTrack.release.xcconfig"; path = "Target Support Files/Pods-CryptoTrack/Pods-CryptoTrack.release.xcconfig"; sourceTree = "<group>"; };
 		AC702F8C264A7258007AB7A7 /* CryptoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC702F8F264A7258007AB7A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC702F91264A7258007AB7A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		AC702F98264A7259007AB7A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC702F9B264A7259007AB7A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC702F9D264A7259007AB7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC702FA3264A727C007AB7A7 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		AC702FA5264A77CB007AB7A7 /* CryptoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTableViewCell.swift; sourceTree = "<group>"; };
+		AC702FA7264A84F2007AB7A7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB737572D84F46830B31AFC /* Pods_CryptoTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ADF31B18CD8528B47393A73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A55F590A58C45158C165A0E /* Pods_CryptoTrack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC702F83264A7258007AB7A7 = {
 			isa = PBXGroup;
 			children = (
 				AC702F8E264A7258007AB7A7 /* CryptoTrack */,
 				AC702F8D264A7258007AB7A7 /* Products */,
+				F31E1FEB8652B22197D8F58E /* Pods */,
+				4ADF31B18CD8528B47393A73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +79,57 @@
 			children = (
 				AC702F8F264A7258007AB7A7 /* AppDelegate.swift */,
 				AC702F91264A7258007AB7A7 /* SceneDelegate.swift */,
-				AC702F93264A7258007AB7A7 /* ViewController.swift */,
+				AC89F511264AD0070062BFCC /* Controller */,
+				AC89F510264AD0010062BFCC /* View */,
+				AC89F50E264ACFF40062BFCC /* Manager */,
+				AC89F50F264ACFFA0062BFCC /* Model */,
 				AC702F95264A7258007AB7A7 /* Main.storyboard */,
 				AC702F98264A7259007AB7A7 /* Assets.xcassets */,
 				AC702F9A264A7259007AB7A7 /* LaunchScreen.storyboard */,
 				AC702F9D264A7259007AB7A7 /* Info.plist */,
 			);
 			path = CryptoTrack;
+			sourceTree = "<group>";
+		};
+		AC89F50E264ACFF40062BFCC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				AC702FA3264A727C007AB7A7 /* APICaller.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AC89F50F264ACFFA0062BFCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC702FA7264A84F2007AB7A7 /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC89F510264AD0010062BFCC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC702FA5264A77CB007AB7A7 /* CryptoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AC89F511264AD0070062BFCC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC702F93264A7258007AB7A7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F31E1FEB8652B22197D8F58E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B687638F6071198985EB64E /* Pods-CryptoTrack.debug.xcconfig */,
+				A1A700EB6DC7EE185BA747EE /* Pods-CryptoTrack.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC702FA0264A7259007AB7A7 /* Build configuration list for PBXNativeTarget "CryptoTrack" */;
 			buildPhases = (
+				5E167D2B823AAB4D8BA38874 /* [CP] Check Pods Manifest.lock */,
 				AC702F88264A7258007AB7A7 /* Sources */,
 				AC702F89264A7258007AB7A7 /* Frameworks */,
 				AC702F8A264A7258007AB7A7 /* Resources */,
+				3488AA7508BFADBAB705470C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +199,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3488AA7508BFADBAB705470C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoTrack/Pods-CryptoTrack-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoTrack/Pods-CryptoTrack-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoTrack/Pods-CryptoTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E167D2B823AAB4D8BA38874 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC702F88264A7258007AB7A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,6 +249,9 @@
 				AC702F94264A7258007AB7A7 /* ViewController.swift in Sources */,
 				AC702F90264A7258007AB7A7 /* AppDelegate.swift in Sources */,
 				AC702F92264A7258007AB7A7 /* SceneDelegate.swift in Sources */,
+				AC702FA8264A84F2007AB7A7 /* Models.swift in Sources */,
+				AC702FA6264A77CB007AB7A7 /* CryptoTableViewCell.swift in Sources */,
+				AC702FA4264A727C007AB7A7 /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +395,7 @@
 		};
 		AC702FA1264A7259007AB7A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B687638F6071198985EB64E /* Pods-CryptoTrack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -296,12 +409,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Salmik.CryptoTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		AC702FA2264A7259007AB7A7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1A700EB6DC7EE185BA747EE /* Pods-CryptoTrack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,7 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Salmik.CryptoTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
